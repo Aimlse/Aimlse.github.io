@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMLSE - Future of Technology Education</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #ffffff;
+            color: #0a1929;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0a1929 0%, #1a2f4a 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .logo-container {
+            max-width: 500px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.3));
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tagline {
+            color: #e0e7ff;
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #0a1929;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid #667eea;
+            margin: 40px 0;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .section.visible .mission-box {
+            transform: scale(1);
+        }
+
+        .mission-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #1a2f4a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(10, 25, 41, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #f0f4ff;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .section.visible .feature-card {
+            animation: fadeInUpCard 0.6s ease-out forwards;
+        }
+
+        .section.visible .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .section.visible .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .section.visible .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .section.visible .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        .section.visible .feature-card:nth-child(5) { animation-delay: 0.5s; }
+        .section.visible .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUpCard {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .feature-card:hover .feature-icon {
+            animation: spin 0.6s ease-in-out;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .feature-card h3 {
+            color: #0a1929;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(10, 25, 41, 0.08);
+            border: 2px solid #f0f4ff;
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .section.visible .team-member {
+            animation: fadeInUpCard 0.6s ease-out forwards;
+        }
+
+        .section.visible .team-member:nth-child(1) { animation-delay: 0.1s; }
+        .section.visible .team-member:nth-child(2) { animation-delay: 0.2s; }
+        .section.visible .team-member:nth-child(3) { animation-delay: 0.3s; }
+        .section.visible .team-member:nth-child(4) { animation-delay: 0.4s; }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member h3 {
+            color: #0a1929;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .team-member .role {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-section {
+            background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
+            padding: 60px 20px;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 60px auto;
+            box-shadow: 0 10px 40px rgba(10, 25, 41, 0.1);
+        }
+
+        .form-section h2 {
+            color: #0a1929;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-section p {
+            text-align: center;
+            color: #4a5568;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #0a1929;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e7ff;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-button:active {
+            transform: translateY(-1px);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotateGlow 20s linear infinite;
+        }
+
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section p {
+            color: #e0e7ff;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            background: #ffffff;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background: #0a1929;
+            color: #e0e7ff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .form-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://i.imgur.com/placeholder.png" alt="AIMLSE Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <svg style="display:none;" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circular Badge -->
+                <g transform="translate(80, 100)">
+                    <circle cx="0" cy="0" r="70" fill="none" stroke="#667eea" stroke-width="2"/>
+                    <text x="0" y="-45" font-family="Arial, sans-serif" font-size="14" fill="#a0b0d0" text-anchor="middle">AAI QUANTUM</text>
+                    
+                    <!-- Microchip Icon -->
+                    <rect x="-20" y="-10" width="40" height="20" fill="#667eea" rx="2"/>
+                    <rect x="-15" y="-5" width="30" height="10" fill="#0a1929" rx="1"/>
+                    
+                    <!-- Chip pins -->
+                    <line x1="-20" y1="-7" x2="-30" y2="-7" stroke="#a0b0d0" stroke-width="2"/>
+                    <line x1="-20" y1="0" x2="-30" y2="0" stroke="#a0b0d0" stroke-width="2"/>
+                    <line x1="-20" y1="7" x2="-30" y2="7" stroke="#a0b0d0" stroke-width="2"/>
+                    
+                    <line x1="20" y1="-7" x2="30" y2="-7" stroke="#a0b0d0" stroke-width="2"/>
+                    <line x1="20" y1="0" x2="30" y2="0" stroke="#a0b0d0" stroke-width="2"/>
+                    <line x1="20" y1="7" x2="30" y2="7" stroke="#a0b0d0" stroke-width="2"/>
+                    
+                    <line x1="-10" y1="-10" x2="-10" y2="-20" stroke="#a0b0d0" stroke-width="2"/>
+                    <line x1="0" y1="-10" x2="0" y2="-20" stroke="#a0b0d0" stroke-width="2"/>
+                    <line x1="10" y1="-10" x2="10" y2="-20" stroke="#a0b0d0" stroke-width="2"/>
+                    
+                    <line x1="-10" y1="10" x2="-10" y2="20" stroke="#a0b0d0" stroke-width="2"/>
+                    <line x1="0" y1="10" x2="0" y2="20" stroke="#a0b0d0" stroke-width="2"/>
+                    <line x1="10" y1="10" x2="10" y2="20" stroke="#a0b0d0" stroke-width="2"/>
+                    
+                    <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" fill="#a0b0d0" text-anchor="middle">COMPUTING</text>
+                    <text x="-55" y="8" font-family="Arial, sans-serif" font-size="11" fill="#a0b0d0" text-anchor="middle" transform="rotate(-90, -55, 8)">UNIV17</text>
+                </g>
+                
+                <!-- AIMLSE Text -->
+                <text x="420" y="105" font-family="Arial, sans-serif" font-size="70" fill="white" font-weight="300">AIMLSE</text>
+                <text x="420" y="135" font-family="Arial, sans-serif" font-size="16" fill="#a0b0d0">Non Profit Company</text>
+                
+                <!-- Gradient underline -->
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <line x1="420" y1="142" x2="700" y2="142" stroke="url(#gradient)" stroke-width="2"/>
+            </svg>
+        </div>
+        <p class="tagline">Artificial Intelligence, Machine Learning, and Quantum Science Education</p>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Our <span class="gradient-text">Mission</span></h2>
+            <div class="mission-box">
+                <p>
+                    AIMLSE is a nonprofit organization built to revolutionize how middle school students learn cutting-edge technology. 
+                    We bring the future of technology education to everyone — combining open learning, real collaboration, 
+                    and intelligent automation in one connected platform.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">What Makes Us <span class="gradient-text">Different</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Discord Integration</h3>
+                    <p>Learn directly through Discord with an interactive, community-driven environment where students collaborate and engage.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Learning</h3>
+                    <p>Smart automation and AI bots organize students into classroom groups, assign personalized tasks, and track progress seamlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚛️</div>
+                    <h3>Quantum Computing</h3>
+                    <p>Dive into the fascinating world of quantum computing with hands-on projects and accessible learning materials.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Machine Learning</h3>
+                    <p>Master AI and machine learning concepts through practical applications and real-world projects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Collaborative Projects</h3>
+                    <p>Work together with peers on exciting projects that bring theoretical concepts to life.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Structured Curriculum</h3>
+                    <p>Follow a carefully designed learning path that makes complex topics engaging and accessible to all students.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Meet Our <span class="gradient-text">Team</span></h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Sourish Mishra</h3>
+                    <p class="role">Chief Executive Officer</p>
+                </div>
+                <div class="team-member">
+                    <h3>Aarav Gupta</h3>
+                    <p class="role">Head of Operations</p>
+                </div>
+                <div class="team-member">
+                    <h3>Gagan Buggeinani</h3>
+                    <p class="role">Head of Marketing</p>
+                </div>
+                <div class="team-member">
+                    <h3>Arnav Gupta</h3>
+                    <p class="role">Communication Coordinator</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section form-section">
+            <h2><span class="gradient-text">Teacher Registration</span></h2>
+            <p>Bring cutting-edge technology education to your classroom! If you're a student, please share this form with your teachers.</p>
+            <form id="joinForm">
+                <div class="form-group">
+                    <label for="name">Teacher Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@school.edu">
+                </div>
+                <div class="form-group">
+                    <label for="position">Position/Title *</label>
+                    <input type="text" id="position" name="position" required placeholder="e.g., Math Teacher, Science Teacher, Technology Coordinator">
+                </div>
+                <div class="form-group">
+                    <label for="school">School Name *</label>
+                    <input type="text" id="school" name="school" required placeholder="Name of your school">
+                </div>
+                <div class="form-group">
+                    <label for="heard">How did you hear about us? *</label>
+                    <select id="heard" name="heard" required>
+                        <option value="">Select an option</option>
+                        <option value="youtube">YouTube</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="tiktok">TikTok</option>
+                        <option value="email">Email</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Questions or Comments (Optional)</label>
+                    <textarea id="message" name="message" placeholder="Any questions or additional information you'd like to share..."></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit Registration</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready to Transform Your Classroom?</h2>
+        <p>Join educators bringing quantum computing and AI to middle school students</p>
+        <a href="#joinForm" class="cta-button">Register as a Teacher</a>
+    </div>
+
+    <div class="footer">
+        <p><strong>AIMLSE</strong> - Artificial Intelligence, Machine Learning, and Quantum Science Education</p>
+        <p>A nonprofit organization dedicated to bringing cutting-edge technology education to middle school students</p>
+        <p style="margin-top: 20px; opacity: 0.7;">© 2025 AIMLSE. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Form submission
+        document.getElementById('joinForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create mailto link with form data
+            const subject = encodeURIComponent('AIMLSE Teacher Registration - ' + data.name);
+            const body = encodeURIComponent(
+                `Teacher Registration Form Submission\n\n` +
+                `Teacher Name: ${data.name}\n` +
+                `Email: ${data.email}\n` +
+                `Position/Title: ${data.position}\n` +
+                `School Name: ${data.school}\n` +
+                `How did you hear about us: ${data.heard}\n` +
+                `Additional Comments: ${data.message || 'N/A'}\n`
+            );
+            
+            // Open email client
+            window.location.href = `mailto:admin@aimlse.org?subject=${subject}&body=${body}`;
+            
+            // Show confirmation
+            alert('Thank you for registering with AIMLSE! Your email client will open to send your registration. We will review your information and contact you soon with next steps to bring our program to your classroom.');
+            e.target.reset();
+        });
+
+        // Smooth scroll for CTA button
+        document.querySelector('.cta-button').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.form-section').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    </script>
+</body>
+</html>
