@@ -424,6 +424,123 @@
             margin: 10px 0;
         }
 
+        .nav-bar {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(10, 25, 41, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 20px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: #0a1929;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .info-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .info-section {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(10, 25, 41, 0.08);
+            margin-bottom: 30px;
+            border-left: 5px solid #667eea;
+        }
+
+        .info-section h3 {
+            color: #0a1929;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-section h4 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-section ul li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .info-section ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #764ba2;
+        }
+
+        .highlight-box p {
+            margin: 10px 0;
+            color: #1a2f4a;
+            font-size: 1.05rem;
+        }
+
+        .icon-large {
+            font-size: 2rem;
+        }
+
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2rem;
@@ -440,6 +557,19 @@
             .form-section {
                 padding: 40px 20px;
             }
+
+            .nav-container {
+                gap: 15px;
+            }
+
+            .nav-link {
+                padding: 8px 15px;
+                font-size: 0.95rem;
+            }
+
+            .info-section {
+                padding: 25px;
+            }
         }
     </style>
 </head>
@@ -450,6 +580,17 @@
         </div>
         <p class="tagline">Artificial Intelligence, Machine Learning, and Quantum Science Education</p>
     </div>
+
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a class="nav-link active" onclick="showPage('home')">Home</a>
+            <a class="nav-link" onclick="showPage('info')">Program Information</a>
+            <a class="nav-link" onclick="showPage('register')">Register</a>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
 
     <div class="container">
         <section class="section">
@@ -573,16 +714,14 @@
                 <button type="submit" class="submit-button">Submit Registration</button>
             </form>
         </section>
-    </div>
 
-    <div class="cta-section">
-        <h2>Ready to Transform Your Classroom?</h2>
-        <p>Join educators bringing quantum computing and AI to middle school students</p>
-        <a href="#joinForm" class="cta-button">Register as a Teacher</a>
-    </div>
+        <div class="cta-section">
+            <h2>Ready to Transform Your Classroom?</h2>
+            <p>Join educators bringing quantum computing and AI to middle school students</p>
+            <a href="#joinForm" class="cta-button">Register as a Teacher</a>
+        </div>
 
-    <div class="container" style="padding-top: 0;">
-        <section class="section">
+        <section class="section visible">
             <h2 class="section-title">Resources for <span class="gradient-text">Students</span></h2>
             <div class="mission-box" style="text-align: center;">
                 <h3 style="color: #0a1929; margin-bottom: 20px; font-size: 1.5rem;">📋 AIMLSE Student Poster</h3>
@@ -599,6 +738,96 @@
             </div>
         </section>
     </div>
+    </div>
+    </div>
+
+    <!-- INFORMATION PAGE -->
+    <div id="info" class="page">
+        <div class="container">
+            <section class="section visible">
+                <h2 class="section-title">Program <span class="gradient-text">Information</span></h2>
+                
+                <div class="info-content">
+                    <div class="info-section">
+                        <h3><span class="icon-large">📚</span> About the AIMLSE Club</h3>
+                        <p style="color: #4a5568; line-height: 1.8; margin-bottom: 20px;">
+                            The AIMLSE Club is designed for motivated students who are excited to explore Artificial Intelligence (AI) and Quantum Computing. 
+                            This program is ideal for 6th–8th grade students who want to deepen their knowledge by learning at home and participating in 
+                            collaborative activities during club meetings.
+                        </p>
+                        
+                        <h4>📅 During Each Meeting:</h4>
+                        <ul>
+                            <li>Students will watch a guided AIMLSE video lesson together</li>
+                            <li>Groups will be automatically formed by our bots based on each student's current knowledge and learning level</li>
+                            <li>Students will collaborate and discuss through Discord with the support of AIMLSE team mentors</li>
+                        </ul>
+
+                        <h4>👨‍🏫 Teachers Only Need To:</h4>
+                        <ul>
+                            <li>Supervise the club during its scheduled time</li>
+                            <li>Provide a classroom space with a computer and internet access</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>No additional teaching workload is required</strong> — AIMLSE provides all instructional materials.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><span class="icon-large">💬</span> Discord Policy</h3>
+                        <p style="color: #4a5568; line-height: 1.8; margin-bottom: 20px;">
+                            To make collaboration engaging and safe, AIMLSE uses a moderated Discord server as the main communication platform 
+                            for students and mentors.
+                        </p>
+
+                        <h4>🎯 Purpose:</h4>
+                        <p style="color: #4a5568; margin-bottom: 20px;">Discord will be where students work together, ask questions, and get support from AIMLSE team members.</p>
+
+                        <h4>🔒 Safety Measures:</h4>
+                        <ul>
+                            <li>The server is monitored by AIMLSE moderators to maintain a positive and secure environment for all participants</li>
+                            <li>Students will verify their account using the AIMLSE verification bot</li>
+                            <li><strong>Never share your password with anyone or any bot</strong> — the system only asks for verification tokens, not credentials</li>
+                            <li>Students must communicate respectfully, follow AIMLSE community guidelines, and help make the space welcoming and inclusive</li>
+                            <li>Any inappropriate or unsafe behavior will result in account review and potential removal from the server</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><span class="icon-large">🏆</span> Events and Opportunities</h3>
+                        
+                        <h4>💻 Online Hackathons:</h4>
+                        <p style="color: #4a5568; margin-bottom: 15px;">Participate in AIMLSE's virtual AI and Quantum Computing hackathons to apply your skills in creative, team-based projects.</p>
+
+                        <h4>🤝 Collaborative Challenges:</h4>
+                        <p style="color: #4a5568; margin-bottom: 15px;">Work with peers across different schools to solve real-world inspired problems.</p>
+
+                        <h4>⭐ Community Recognition:</h4>
+                        <p style="color: #4a5568; margin-bottom: 15px;">Top participants and innovative teams may be featured on AIMLSE's official channels.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3><span class="icon-large">📝</span> How to Join</h3>
+                        
+                        <div class="highlight-box">
+                            <h4 style="margin-top: 0;">If you are a student:</h4>
+                            <p>1. Fill out the Student Interest Survey (coming soon)</p>
+                            <p>2. Share our website — <strong>aimlse.org</strong> — with your teacher so they can register your school</p>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4 style="margin-top: 0;">If you are a teacher:</h4>
+                            <p>Please visit the <strong>Register</strong> page to register your school's club. Your role will simply be to supervise and provide a classroom with a computer — AIMLSE handles the rest!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- REGISTER PAGE -->
+    <div id="register" class="page">
 
     <div class="footer">
         <p><strong>AIMLSE</strong> - Artificial Intelligence, Machine Learning, and Quantum Science Education</p>
@@ -607,6 +836,28 @@
     </div>
 
     <script>
+        // Page navigation
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageName).classList.add('active');
+            
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         // Scroll animation observer
         const observerOptions = {
             threshold: 0.1,
@@ -655,10 +906,13 @@
         // Smooth scroll for CTA button
         document.querySelector('.cta-button').addEventListener('click', (e) => {
             e.preventDefault();
-            document.querySelector('.form-section').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'center'
-            });
+            showPage('register');
+            setTimeout(() => {
+                document.querySelector('.form-section').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }, 100);
         });
     </script>
 </body>
