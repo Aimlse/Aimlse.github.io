@@ -966,41 +966,9 @@
             <section class="section visible form-section">
                 <h2>Teacher <span class="accent-text">Registration</span></h2>
                 <p>Bring cutting-edge technology education to your classroom. If you're a student, please share this form with your teachers.</p>
-                <form id="joinForm">
-                    <div class="form-group">
-                        <label for="name">Teacher Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@school.edu">
-                    </div>
-                    <div class="form-group">
-                        <label for="position">Position/Title *</label>
-                        <input type="text" id="position" name="position" required placeholder="e.g., Math Teacher, Science Teacher, Technology Coordinator">
-                    </div>
-                    <div class="form-group">
-                        <label for="school">School Name *</label>
-                        <input type="text" id="school" name="school" required placeholder="Name of your school">
-                    </div>
-                    <div class="form-group">
-                        <label for="heard">How did you hear about us? *</label>
-                        <select id="heard" name="heard" required>
-                            <option value="">Select an option</option>
-                            <option value="youtube">YouTube</option>
-                            <option value="instagram">Instagram</option>
-                            <option value="tiktok">TikTok</option>
-                            <option value="email">Email</option>
-                            <option value="colleague">Colleague/Friend</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Additional Questions or Comments (Optional)</label>
-                        <textarea id="message" name="message" placeholder="Any questions or additional information you'd like to share..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Submit Registration</button>
-                </form>
+                <div style="display: flex; justify-content: center; margin-top: 30px;">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvj2iU8pQoS1By5AQNMcib4jUEPHBN4hNOoHVXAUu-QWZB3A/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 640px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">Loading…</iframe>
+                </div>
             </section>
 
             <div class="cta-section">
@@ -1084,33 +1052,6 @@
 
         document.querySelectorAll('.section').forEach(section => {
             observer.observe(section);
-        });
-
-        // Form submission
-        document.getElementById('joinForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-            
-            // Create mailto link with form data
-            const subject = encodeURIComponent('AIMLSE Teacher Registration - ' + data.name);
-            const body = encodeURIComponent(
-                `Teacher Registration Form Submission\n\n` +
-                `Teacher Name: ${data.name}\n` +
-                `Email: ${data.email}\n` +
-                `Position/Title: ${data.position}\n` +
-                `School Name: ${data.school}\n` +
-                `How did you hear about us: ${data.heard}\n` +
-                `Additional Comments: ${data.message || 'N/A'}\n`
-            );
-            
-            // Open email client
-            window.location.href = `mailto:admin@aimlse.org?subject=${subject}&body=${body}`;
-            
-            // Show confirmation
-            alert('Thank you for registering with AIMLSE! Your email client will open to send your registration. We will review your information and contact you soon with next steps to bring our program to your classroom.');
-            e.target.reset();
         });
     </script>
 </body>
