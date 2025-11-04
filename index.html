@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIMLSE - Future of Technology Education</title>
+    <title>AIMLSE - Artificial Intelligence & Machine Learning for Student Empowerment</title>
     <style>
         * {
             margin: 0;
@@ -14,13 +14,13 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: #ffffff;
-            color: #0a1929;
+            color: #1a1a1a;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, #0a1929 0%, #1a2f4a 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             padding: 80px 20px;
             text-align: center;
             position: relative;
@@ -34,8 +34,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 50%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(52, 73, 94, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(44, 62, 80, 0.3) 0%, transparent 50%);
             animation: pulseGlow 8s ease-in-out infinite;
         }
 
@@ -55,7 +55,7 @@
         .logo-container img {
             width: 100%;
             height: auto;
-            filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.3));
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
         }
 
         @keyframes fadeInDown {
@@ -70,7 +70,7 @@
         }
 
         .tagline {
-            color: #e0e7ff;
+            color: #ecf0f1;
             font-size: 1.5rem;
             font-weight: 300;
             margin-top: 20px;
@@ -110,31 +110,21 @@
 
         .section-title {
             font-size: 2.5rem;
-            color: #0a1929;
+            color: #2c3e50;
             margin-bottom: 30px;
             text-align: center;
             font-weight: 700;
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease infinite;
-            background-size: 200% 200%;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+        .accent-text {
+            color: #3498db;
         }
 
         .mission-box {
-            background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
+            background: #f8f9fa;
             padding: 40px;
-            border-radius: 20px;
-            border-left: 5px solid #667eea;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
             margin: 40px 0;
             transform: scale(0.95);
             transition: transform 0.3s ease;
@@ -145,9 +135,9 @@
         }
 
         .mission-box p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             line-height: 1.8;
-            color: #1a2f4a;
+            color: #2c3e50;
         }
 
         .features-grid {
@@ -160,10 +150,10 @@
         .feature-card {
             background: #ffffff;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(10, 25, 41, 0.08);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid #f0f4ff;
+            border: 1px solid #e0e0e0;
             opacity: 0;
             transform: translateY(30px);
         }
@@ -187,40 +177,18 @@
         }
 
         .feature-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            display: inline-block;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .feature-card:hover .feature-icon {
-            animation: spin 0.6s ease-in-out;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(1.2); }
-            100% { transform: rotate(360deg) scale(1); }
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
         .feature-card h3 {
-            color: #0a1929;
+            color: #2c3e50;
             margin-bottom: 15px;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
 
         .feature-card p {
-            color: #4a5568;
+            color: #5a6c7d;
             line-height: 1.6;
         }
 
@@ -234,10 +202,10 @@
         .team-member {
             background: #ffffff;
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(10, 25, 41, 0.08);
-            border: 2px solid #f0f4ff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e0e0;
             transition: transform 0.3s ease;
             opacity: 0;
             transform: translateY(30px);
@@ -251,182 +219,27 @@
         .section.visible .team-member:nth-child(2) { animation-delay: 0.2s; }
         .section.visible .team-member:nth-child(3) { animation-delay: 0.3s; }
         .section.visible .team-member:nth-child(4) { animation-delay: 0.4s; }
+        .section.visible .team-member:nth-child(5) { animation-delay: 0.5s; }
 
         .team-member:hover {
             transform: translateY(-5px);
         }
 
         .team-member h3 {
-            color: #0a1929;
+            color: #2c3e50;
             margin-bottom: 10px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         .team-member .role {
-            color: #667eea;
+            color: #3498db;
             font-weight: 600;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .form-section {
-            background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
-            padding: 60px 20px;
-            border-radius: 20px;
-            max-width: 800px;
-            margin: 60px auto;
-            box-shadow: 0 10px 40px rgba(10, 25, 41, 0.1);
-        }
-
-        .form-section h2 {
-            color: #0a1929;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .form-section p {
-            text-align: center;
-            color: #4a5568;
-            margin-bottom: 40px;
-            font-size: 1.1rem;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            color: #0a1929;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e7ff;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            background: #ffffff;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .submit-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
-            width: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .submit-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        }
-
-        .submit-button:active {
-            transform: translateY(-1px);
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 80px 20px;
-            text-align: center;
-            border-radius: 20px;
-            margin: 60px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotateGlow 20s linear infinite;
-        }
-
-        @keyframes rotateGlow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .cta-section h2 {
-            color: #ffffff;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-section p {
-            color: #e0e7ff;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-button {
-            background: #ffffff;
-            color: #667eea;
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .footer {
-            background: #0a1929;
-            color: #e0e7ff;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .footer p {
-            margin: 10px 0;
+            font-size: 0.9rem;
         }
 
         .nav-bar {
             background: #ffffff;
-            box-shadow: 0 2px 10px rgba(10, 25, 41, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -443,23 +256,22 @@
         }
 
         .nav-link {
-            color: #0a1929;
+            color: #2c3e50;
             text-decoration: none;
             font-weight: 600;
             padding: 10px 20px;
-            border-radius: 8px;
+            border-radius: 4px;
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .nav-link:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #3498db;
             color: #ffffff;
-            transform: translateY(-2px);
         }
 
         .nav-link.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #3498db;
             color: #ffffff;
         }
 
@@ -472,32 +284,35 @@
         }
 
         .info-content {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .info-section {
             background: #ffffff;
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(10, 25, 41, 0.08);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             margin-bottom: 30px;
-            border-left: 5px solid #667eea;
+            border-left: 4px solid #3498db;
         }
 
         .info-section h3 {
-            color: #0a1929;
-            font-size: 1.8rem;
+            color: #2c3e50;
+            font-size: 1.6rem;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
         }
 
         .info-section h4 {
-            color: #667eea;
-            font-size: 1.3rem;
+            color: #3498db;
+            font-size: 1.2rem;
             margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .info-section p {
+            color: #5a6c7d;
+            line-height: 1.8;
             margin-bottom: 15px;
         }
 
@@ -507,38 +322,228 @@
         }
 
         .info-section ul li {
-            padding: 12px 0;
+            padding: 10px 0;
             padding-left: 30px;
             position: relative;
-            color: #4a5568;
+            color: #5a6c7d;
             line-height: 1.6;
         }
 
         .info-section ul li::before {
-            content: '✓';
+            content: '•';
             position: absolute;
-            left: 0;
-            color: #667eea;
+            left: 10px;
+            color: #3498db;
             font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .curriculum-week {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 3px solid #3498db;
+        }
+
+        .curriculum-week h5 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tech-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .tech-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .tech-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .tech-card h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .form-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 60px auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-section h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-section p {
+            text-align: center;
+            color: #5a6c7d;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: #3498db;
+            color: #ffffff;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .cta-section {
+            background: #3498db;
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 60px 20px;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: #ecf0f1;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: #ffffff;
+            color: #3498db;
+            padding: 15px 40px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 20px 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            color: #ffffff;
+            margin-bottom: 20px;
             font-size: 1.2rem;
         }
 
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #95a5a6;
+        }
+
         .highlight-box {
-            background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
+            background: #e8f4fd;
             padding: 25px;
-            border-radius: 12px;
+            border-radius: 6px;
             margin: 20px 0;
-            border-left: 4px solid #764ba2;
-        }
-
-        .highlight-box p {
-            margin: 10px 0;
-            color: #1a2f4a;
-            font-size: 1.05rem;
-        }
-
-        .icon-large {
-            font-size: 2rem;
+            border-left: 4px solid #3498db;
         }
 
         @media (max-width: 768px) {
@@ -576,249 +581,378 @@
 <body>
     <div class="header">
         <div class="logo-container">
-            <img src="https://raw.githubusercontent.com/aimlse/aimlse.github.io/main/ff22191b-5081-4aa8-a3b4-bb3b4bf046a2_removalai_preview.png" alt="AIMLSE Logo - Learn The Frontiers">
+            <img src="https://raw.githubusercontent.com/aimlse/aimlse.github.io/main/ff22191b-5081-4aa8-a3b4-bb3b4bf046a2_removalai_preview.png" alt="AIMLSE Logo">
         </div>
-        <p class="tagline">Artificial Intelligence, Machine Learning, and Quantum Science Education</p>
+        <p class="tagline">Artificial Intelligence & Machine Learning for Student Empowerment</p>
     </div>
 
     <nav class="nav-bar">
         <div class="nav-container">
             <a class="nav-link active" onclick="showPage('home')">Home</a>
             <a class="nav-link" onclick="showPage('info')">Program Information</a>
+            <a class="nav-link" onclick="showPage('about')">About Us</a>
             <a class="nav-link" onclick="showPage('register')">Register</a>
         </div>
     </nav>
 
     <!-- HOME PAGE -->
     <div id="home" class="page active">
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">Our <span class="accent-text">Mission</span></h2>
+                <div class="mission-box">
+                    <p>
+                        AIMLSE is a nonprofit organization dedicated to empowering middle school students (6th–8th grade) to explore cutting-edge technologies, including AI, machine learning, and quantum computing. We build confidence, creativity, and leadership skills through guided learning experiences that combine open collaboration, real-world projects, and intelligent automation in one connected platform.
+                    </p>
+                </div>
+            </section>
 
-    <div class="container">
-        <section class="section">
-            <h2 class="section-title">Our <span class="gradient-text">Mission</span></h2>
-            <div class="mission-box">
-                <p>
-                    AIMLSE is a nonprofit organization built to revolutionize how middle school students learn cutting-edge technology. 
-                    We bring the future of technology education to everyone — combining open learning, real collaboration, 
-                    and intelligent automation in one connected platform. We don't just introduce concepts — we dive deep into the 
-                    fundamentals, ensuring students truly understand AI, machine learning, and quantum computing from the ground up.
-                </p>
+            <section class="section">
+                <h2 class="section-title">Our <span class="accent-text">Vision</span></h2>
+                <div class="mission-box">
+                    <p>
+                        Every student deserves the opportunity to explore the frontiers of technology and develop problem-solving and innovation skills for the future. We envision a world where young learners have access to comprehensive education in emerging technologies, preparing them to lead and innovate in tomorrow's world.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technologies We <span class="accent-text">Explore</span></h2>
+                <div class="tech-showcase">
+                    <div class="tech-card">
+                        <img src="chatgpt.png" alt="Artificial Intelligence">
+                        <h4>Artificial Intelligence</h4>
+                        <p>AI systems analyze information, recognize patterns, and make decisions in ways that resemble aspects of human reasoning. Students learn to build and understand AI models that can process data and solve real-world problems.</p>
+                    </div>
+                    <div class="tech-card">
+                        <img src="quantum_computing.png" alt="Quantum Computing">
+                        <h4>Quantum Computing</h4>
+                        <p>Quantum computing leverages principles of quantum mechanics to process information in revolutionary ways. Students explore qubits, superposition, and entanglement to understand how quantum computers can solve complex problems.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Program <span class="accent-text">Features</span></h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Discord-Based Learning</h3>
+                        <p>Collaborative learning environment where students engage with peers and mentors through our moderated Discord platform.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>AI-Powered Organization</h3>
+                        <p>Smart automation organizes students into balanced learning groups based on skill level and experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Guided Video Lessons</h3>
+                        <p>Professional video instruction covering AI, machine learning, and quantum computing concepts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Hands-On Projects</h3>
+                        <p>Real-world applications and coding projects that bring theoretical concepts to life.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Expert Mentorship</h3>
+                        <p>AIMLSE team members provide guidance, answer questions, and support student learning throughout the program.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Structured Curriculum</h3>
+                        <p>Carefully designed 10-week learning path covering mathematics, programming, AI, and quantum computing.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Leadership <span class="accent-text">Team</span></h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Sourish Mishra</h3>
+                        <p class="role">Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Aarav Gupta</h3>
+                        <p class="role">Co-Founder & COO</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Arnav Gupta</h3>
+                        <p class="role">Co-Founder & Communication Coordinator</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Gagan Buggeneini</h3>
+                        <p class="role">Co-Founder & Head of Marketing</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Siya Gupta</h3>
+                        <p class="role">Volunteer Coordinator</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cta-section">
+                <h2>Ready to Transform Your Classroom?</h2>
+                <p>Join educators bringing quantum computing and AI to middle school students</p>
+                <a href="#" onclick="showPage('register'); return false;" class="cta-button">Register as a Teacher</a>
             </div>
-        </section>
 
-        <section class="section">
-            <h2 class="section-title">Deep-Dive <span class="gradient-text">Learning Approach</span></h2>
-            <div class="mission-box">
-                <p>
-                    At AIMLSE, we believe in thorough, conceptual understanding rather than surface-level introductions. Our curriculum 
-                    takes students on a comprehensive journey through each topic, breaking down complex concepts into digestible lessons 
-                    while maintaining academic rigor. Students explore the mathematical foundations, practical applications, and ethical 
-                    implications of AI and quantum technologies. Through our structured program, students gain the knowledge and confidence 
-                    to pursue advanced studies in these cutting-edge fields.
-                </p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">What Makes Us <span class="gradient-text">Different</span></h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3>Discord Integration</h3>
-                    <p>Learn directly through Discord with an interactive, community-driven environment where students collaborate and engage.</p>
+            <section class="section visible">
+                <h2 class="section-title">Resources for <span class="accent-text">Students</span></h2>
+                <div class="mission-box" style="text-align: center;">
+                    <h3 style="color: #2c3e50; margin-bottom: 20px; font-size: 1.5rem;">AIMLSE Student Information Poster</h3>
+                    <p style="margin-bottom: 25px;">
+                        Interested in joining AIMLSE? Download our student information poster to learn more about the program 
+                        and share it with your teachers.
+                    </p>
+                    <a href="https://raw.githubusercontent.com/aimlse/aimlse.github.io/main/774894b4-8cf6-4485-ac76-a3620e1635d6%20(1).pdf" 
+                       class="cta-button" 
+                       download
+                       style="background: #3498db; color: white; display: inline-block; margin-top: 10px;">
+                        Download Student Poster (PDF)
+                    </a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI-Powered Learning</h3>
-                    <p>Smart automation and AI bots organize students into classroom groups, assign personalized tasks, and track progress seamlessly.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚛️</div>
-                    <h3>Quantum Computing</h3>
-                    <p>Dive into the fascinating world of quantum computing with hands-on projects and accessible learning materials.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>Machine Learning</h3>
-                    <p>Master AI and machine learning concepts through practical applications and real-world projects.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Collaborative Projects</h3>
-                    <p>Work together with peers on exciting projects that bring theoretical concepts to life.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Structured Curriculum</h3>
-                    <p>Follow a carefully designed learning path that makes complex topics engaging and accessible to all students.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Meet Our <span class="gradient-text">Team</span></h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <h3>Sourish Mishra</h3>
-                    <p class="role">Chief Executive Officer</p>
-                </div>
-                <div class="team-member">
-                    <h3>Aarav Gupta</h3>
-                    <p class="role">Head of Operations</p>
-                </div>
-                <div class="team-member">
-                    <h3>Gagan Buggeinani</h3>
-                    <p class="role">Head of Marketing</p>
-                </div>
-                <div class="team-member">
-                    <h3>Arnav Gupta</h3>
-                    <p class="role">Communication Coordinator</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section form-section">
-            <h2><span class="gradient-text">Teacher Registration</span></h2>
-            <p>Bring cutting-edge technology education to your classroom! If you're a student, please share this form with your teachers.</p>
-            <form id="joinForm">
-                <div class="form-group">
-                    <label for="name">Teacher Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@school.edu">
-                </div>
-                <div class="form-group">
-                    <label for="position">Position/Title *</label>
-                    <input type="text" id="position" name="position" required placeholder="e.g., Math Teacher, Science Teacher, Technology Coordinator">
-                </div>
-                <div class="form-group">
-                    <label for="school">School Name *</label>
-                    <input type="text" id="school" name="school" required placeholder="Name of your school">
-                </div>
-                <div class="form-group">
-                    <label for="heard">How did you hear about us? *</label>
-                    <select id="heard" name="heard" required>
-                        <option value="">Select an option</option>
-                        <option value="youtube">YouTube</option>
-                        <option value="instagram">Instagram</option>
-                        <option value="tiktok">TikTok</option>
-                        <option value="email">Email</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Additional Questions or Comments (Optional)</label>
-                    <textarea id="message" name="message" placeholder="Any questions or additional information you'd like to share..."></textarea>
-                </div>
-                <button type="submit" class="submit-button">Submit Registration</button>
-            </form>
-        </section>
-
-        <div class="cta-section">
-            <h2>Ready to Transform Your Classroom?</h2>
-            <p>Join educators bringing quantum computing and AI to middle school students</p>
-            <a href="#joinForm" class="cta-button">Register as a Teacher</a>
+            </section>
         </div>
-
-        <section class="section visible">
-            <h2 class="section-title">Resources for <span class="gradient-text">Students</span></h2>
-            <div class="mission-box" style="text-align: center;">
-                <h3 style="color: #0a1929; margin-bottom: 20px; font-size: 1.5rem;">📋 AIMLSE Student Poster</h3>
-                <p style="margin-bottom: 25px;">
-                    Interested in joining AIMLSE? Download our student information poster to learn more about the program 
-                    and share it with your teachers!
-                </p>
-                <a href="https://raw.githubusercontent.com/aimlse/aimlse.github.io/main/774894b4-8cf6-4485-ac76-a3620e1635d6%20(1).pdf" 
-                   class="cta-button" 
-                   download
-                   style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; display: inline-block; margin-top: 10px;">
-                    Download Student Poster (PDF)
-                </a>
-            </div>
-        </section>
-    </div>
-    </div>
     </div>
 
     <!-- INFORMATION PAGE -->
     <div id="info" class="page">
         <div class="container">
             <section class="section visible">
-                <h2 class="section-title">Program <span class="gradient-text">Information</span></h2>
+                <h2 class="section-title">Program <span class="accent-text">Information</span></h2>
                 
                 <div class="info-content">
                     <div class="info-section">
-                        <h3><span class="icon-large">📚</span> About the AIMLSE Club</h3>
-                        <p style="color: #4a5568; line-height: 1.8; margin-bottom: 20px;">
-                            The AIMLSE Club is designed for motivated students who are excited to explore Artificial Intelligence (AI) and Quantum Computing. 
-                            This program is ideal for 6th–8th grade students who want to deepen their knowledge by learning at home and participating in 
-                            collaborative activities during club meetings.
+                        <h3>About the AIMLSE Club</h3>
+                        <p>
+                            The AIMLSE Club is designed for motivated middle school students (6th–8th grade) who are eager to explore Artificial Intelligence and Quantum Computing. This program provides a unique learning experience that combines self-paced video lessons, hands-on collaborative projects, and mentorship from experienced AIMLSE team members.
+                        </p>
+                        <p>
+                            Students develop technical skills, critical thinking, teamwork, and creativity through engaging activities that bridge theory and real-world applications.
                         </p>
                         
-                        <h4>📅 During Each Meeting:</h4>
+                        <h4>Program Structure</h4>
+                        <p>Each club meeting follows a structured format to maximize learning outcomes:</p>
+                        
                         <ul>
-                            <li>Students will watch a guided AIMLSE video lesson together</li>
-                            <li>Groups will be automatically formed by our bots based on each student's current knowledge and learning level</li>
-                            <li>Students will collaborate and discuss through Discord with the support of AIMLSE team mentors</li>
+                            <li>Guided Video Lessons: Students watch AIMLSE-produced video lessons tailored to their current knowledge level</li>
+                            <li>Automated Group Formation: Our intelligent system creates balanced learning groups based on skill level and experience</li>
+                            <li>Collaborative Work: Students work together on projects and problem-solving exercises using Discord</li>
+                            <li>Mentor Support: AIMLSE team members guide students, answer questions, and provide real-time feedback</li>
                         </ul>
 
-                        <h4>👨‍🏫 Teachers Only Need To:</h4>
-                        <ul>
-                            <li>Supervise the club during its scheduled time</li>
-                            <li>Provide a classroom space with a computer and internet access</li>
-                        </ul>
+                        <h4>Teacher Responsibilities</h4>
+                        <p>Teachers act as supervisors and facilitators, ensuring the club runs smoothly without adding extra workload:</p>
                         
-                        <div class="highlight-box">
-                            <p><strong>No additional teaching workload is required</strong> — AIMLSE provides all instructional materials.</p>
+                        <ul>
+                            <li>Supervise students during scheduled club time to ensure engagement and focus</li>
+                            <li>Provide a classroom with a computer and internet access</li>
+                            <li>No prior AI or Quantum Computing experience required</li>
+                            <li>AIMLSE provides all instructional materials and mentor support</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>10-Week Curriculum Overview</h3>
+                        
+                        <div class="curriculum-week">
+                            <h5>Weeks 1–2: Mathematical Foundations</h5>
+                            <p>Review essential math concepts needed for AI and machine learning. Concludes with a short assessment to ensure readiness for advanced topics.</p>
+                        </div>
+
+                        <div class="curriculum-week">
+                            <h5>Weeks 3–4: Machine Learning Concepts</h5>
+                            <p>Introduction to machine learning fundamentals, tensors, and basic ML operations that form the foundation of AI systems.</p>
+                        </div>
+
+                        <div class="curriculum-week">
+                            <h5>Weeks 5–6: Python Programming</h5>
+                            <p>Learn Python coding fundamentals and complete programming exercises to prepare for AI project development.</p>
+                        </div>
+
+                        <div class="curriculum-week">
+                            <h5>Weeks 7–8: AI Programming Projects</h5>
+                            <p>Build practical AI applications including linear regression models, learn ReLU layers and activation functions, and practice modular programming.</p>
+                        </div>
+
+                        <div class="curriculum-week">
+                            <h5>Weeks 9–10: Quantum Computing</h5>
+                            <p>Introduction to quantum computing principles, explore quantum algorithms, and discover real-world applications of quantum technology.</p>
                         </div>
                     </div>
 
                     <div class="info-section">
-                        <h3><span class="icon-large">💬</span> Discord Policy</h3>
-                        <p style="color: #4a5568; line-height: 1.8; margin-bottom: 20px;">
-                            To make collaboration engaging and safe, AIMLSE uses a moderated Discord server as the main communication platform 
-                            for students and mentors.
+                        <h3>Discord Communication Platform</h3>
+                        <p>
+                            AIMLSE uses Discord as the primary platform for student collaboration, communication, and mentorship. This serves as the central hub for team discussions, project collaboration, and live interaction with mentors.
                         </p>
 
-                        <h4>🎯 Purpose:</h4>
-                        <p style="color: #4a5568; margin-bottom: 20px;">Discord will be where students work together, ask questions, and get support from AIMLSE team members.</p>
-
-                        <h4>🔒 Safety Measures:</h4>
+                        <h4>Safety and Security Measures</h4>
                         <ul>
-                            <li>The server is monitored by AIMLSE moderators to maintain a positive and secure environment for all participants</li>
-                            <li>Students will verify their account using the AIMLSE verification bot</li>
-                            <li><strong>Never share your password with anyone or any bot</strong> — the system only asks for verification tokens, not credentials</li>
-                            <li>Students must communicate respectfully, follow AIMLSE community guidelines, and help make the space welcoming and inclusive</li>
-                            <li>Any inappropriate or unsafe behavior will result in account review and potential removal from the server</li>
+                            <li>The server is actively monitored by AIMLSE moderators to maintain a safe, positive, and supportive environment</li>
+                            <li>Account verification is required through the AIMLSE verification bot</li>
+                            <li>Students must never share passwords or private credentials</li>
+                            <li>All participants must communicate respectfully and follow community guidelines</li>
+                            <li>Inappropriate behavior or unsafe activity will result in account review and potential removal</li>
+                            <li>Parents and teachers are encouraged to monitor participation</li>
                         </ul>
                     </div>
 
                     <div class="info-section">
-                        <h3><span class="icon-large">🏆</span> Events and Opportunities</h3>
+                        <h3>Code of Conduct</h3>
+                        <p>To ensure a productive and safe environment, all participants must:</p>
                         
-                        <h4>💻 Online Hackathons:</h4>
-                        <p style="color: #4a5568; margin-bottom: 15px;">Participate in AIMLSE's virtual AI and Quantum Computing hackathons to apply your skills in creative, team-based projects.</p>
-
-                        <h4>🤝 Collaborative Challenges:</h4>
-                        <p style="color: #4a5568; margin-bottom: 15px;">Work with peers across different schools to solve real-world inspired problems.</p>
-
-                        <h4>⭐ Community Recognition:</h4>
-                        <p style="color: #4a5568; margin-bottom: 15px;">Top participants and innovative teams may be featured on AIMLSE's official channels.</p>
+                        <ul>
+                            <li>Attend meetings on time and remain engaged throughout</li>
+                            <li>Complete assigned video lessons and exercises prior to discussions</li>
+                            <li>Participate actively in group discussions and projects</li>
+                            <li>Respect fellow students and mentors</li>
+                            <li>Use appropriate language in all communications</li>
+                            <li>Submit original work and properly cite sources</li>
+                            <li>Seek help from mentors when needed</li>
+                            <li>Follow all Discord server guidelines and AIMLSE instructions</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Important:</strong> Failure to follow these rules may result in warnings or removal from the club. Our goal is to maintain a positive learning environment for all students.</p>
+                        </div>
                     </div>
 
                     <div class="info-section">
-                        <h3><span class="icon-large">📝</span> How to Join</h3>
+                        <h3>Events and Opportunities</h3>
+                        
+                        <h4>Online Hackathons</h4>
+                        <p>Participate in AIMLSE's virtual AI and Quantum Computing hackathons, applying your skills to creative, team-based projects that solve real-world problems.</p>
+
+                        <h4>Collaborative Challenges</h4>
+                        <p>Engage with students from different schools, working together on real-world inspired problems while practicing teamwork and innovative thinking.</p>
+
+                        <h4>Community Recognition</h4>
+                        <ul>
+                            <li>Top participants and innovative teams may be featured on AIMLSE's official channels</li>
+                            <li>Certificates and badges are awarded for outstanding contributions and achievements</li>
+                            <li>Opportunities to showcase projects and present findings to the broader AIMLSE community</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>How to Join</h3>
                         
                         <div class="highlight-box">
-                            <h4 style="margin-top: 0;">If you are a student:</h4>
-                            <p>1. Fill out the Student Interest Survey <a><a href="https://docs.google.com/forms/d/e/1FAIpQLSecbh_-L7wU1hooCT1fHWwSnfs3us36mIb7f64q06aJ1Z81LQ/viewform?usp=header"> </a></p>
+                            <h4 style="margin-top: 0;">For Students:</h4>
+                            <p>1. Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSecbh_-L7wU1hooCT1fHWwSnfs3us36mIb7f64q06aJ1Z81LQ/viewform?usp=header" target="_blank" style="color: #3498db; text-decoration: underline;">Student Interest Survey</a></p>
                             <p>2. Share our website — <strong>aimlse.org</strong> — with your teacher so they can register your school</p>
                         </div>
 
                         <div class="highlight-box">
-                            <h4 style="margin-top: 0;">If you are a teacher:</h4>
-                            <p>Please visit the <strong>Register</strong> page to register your school's club. Your role will simply be to supervise and provide a classroom with a computer — AIMLSE handles the rest!</p>
+                            <h4 style="margin-top: 0;">For Teachers:</h4>
+                            <p>Visit the <strong>Register</strong> page to register your school's club. Your role is to supervise and provide a classroom with internet access — AIMLSE handles all instructional content and mentorship.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Additional Benefits</h3>
+                        <ul>
+                            <li>Meetings are designed to be flexible and adaptable to different student skill levels</li>
+                            <li>Students are encouraged to explore beyond lessons and pursue independent projects with mentor guidance</li>
+                            <li>Teachers and parents can request progress reports and updates on student participation and achievements</li>
+                            <li>No cost to schools or families — AIMLSE is a nonprofit dedicated to accessible technology education</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ABOUT US PAGE -->
+    <div id="about" class="page">
+        <div class="container">
+            <section class="section visible">
+                <h2 class="section-title">About <span class="accent-text">AIMLSE</span></h2>
+                
+                <div class="info-content">
+                    <div class="info-section">
+                        <h3>Our Story</h3>
+                        <p>
+                            AIMLSE (Artificial Intelligence & Machine Learning for Student Empowerment) was founded with a clear mission: to democratize access to cutting-edge technology education for middle school students. We believe that every student, regardless of background or resources, should have the opportunity to explore AI, machine learning, and quantum computing.
+                        </p>
+                        <p>
+                            Our program was created by educators and technology enthusiasts who recognized the need for comprehensive, accessible STEM education that goes beyond traditional classroom boundaries. We combine rigorous academic content with engaging, hands-on learning experiences that inspire students to become innovators and problem-solvers.
+                        </p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Leadership Team</h3>
+                        
+                        <div class="curriculum-week">
+                            <h5>Sourish Mishra - Founder & Chief Executive Officer</h5>
+                            <p>Sourish manages the organization, develops website and software infrastructure, creates video lessons, and directly teaches students. His vision drives AIMLSE's mission to make advanced technology education accessible to all middle school students.</p>
+                        </div>
+
+                        <div class="curriculum-week">
+                            <h5>Aarav Gupta - Co-Founder & Chief Operating Officer</h5>
+                            <p>Aarav coordinates meetings, monitors program progress, and supports day-to-day operations to ensure the smooth delivery of our educational programs.</p>
+                        </div>
+
+                        <div class="curriculum-week">
+                            <h5>Arnav Gupta - Co-Founder & Communication Coordinator</h5>
+                            <p>Arnav contacts schools to join the program, manages external communications, and serves as the primary liaison between AIMLSE and educational institutions.</p>
+                        </div>
+
+                        <div class="curriculum-week">
+                            <h5>Gagan Buggeneini - Co-Founder & Head of Marketing</h5>
+                            <p>Gagan manages social media presence, outreach initiatives, and marketing campaigns to expand AIMLSE's reach and impact.</p>
+                        </div>
+
+                        <div class="curriculum-week">
+                            <h5>Siya Gupta - Volunteer Coordinator</h5>
+                            <p>Siya manages volunteers for events and program support, ensuring that our community of mentors and assistants can effectively support student learning.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Why AI and Quantum Computing Matter</h3>
+                        
+                        <h4>Artificial Intelligence</h4>
+                        <p>AI is transforming every aspect of modern life, from healthcare and education to transportation and entertainment. By learning AI fundamentals early, students develop computational thinking, problem-solving skills, and an understanding of how technology shapes our world. AI doesn't replace human intelligence—it enhances it, allowing us to tackle complex challenges and create innovative solutions.</p>
+
+                        <h4>Quantum Computing</h4>
+                        <p>Quantum computing represents the next frontier of computational power. By leveraging quantum mechanics principles like superposition and entanglement, quantum computers can solve problems that are impossible for classical computers. Students who understand quantum concepts today will be the innovators who harness this technology tomorrow.</p>
+
+                        <h4>Early Education Benefits</h4>
+                        <ul>
+                            <li>Strong Foundations: Develop computational thinking and logical reasoning skills</li>
+                            <li>Creativity and Innovation: Early experimentation builds confidence and ingenuity</li>
+                            <li>Future Workforce Preparation: Acquire skills essential for technology-driven careers</li>
+                            <li>Critical Thinking: Engaging with complex concepts strengthens analytical abilities</li>
+                            <li>Collaboration: Team projects develop communication, teamwork, and leadership skills</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Our Commitment</h3>
+                        <p>
+                            AIMLSE is committed to providing high-quality, accessible technology education that empowers students to become the innovators and leaders of tomorrow. We believe in:
+                        </p>
+                        <ul>
+                            <li>Accessibility: Free programs available to all schools and students</li>
+                            <li>Quality: Rigorous curriculum developed by experienced educators</li>
+                            <li>Support: Comprehensive mentorship and guidance throughout the learning journey</li>
+                            <li>Innovation: Constantly updating our content to reflect the latest technological advances</li>
+                            <li>Community: Building a supportive network of learners, educators, and mentors</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Built With AI Assistance:</strong> This website was initially created with the help of AI technology and carefully refined by our team. Using AI assistance demonstrates our commitment to leveraging technology effectively while maintaining human oversight and quality control.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Contact Information</h3>
+                        <p>We'd love to hear from you! Whether you're a teacher interested in bringing AIMLSE to your school, a student eager to learn, or a supporter of STEM education, please reach out.</p>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Email:</strong> <a href="mailto:admin@aimlse.org" style="color: #3498db; text-decoration: underline;">admin@aimlse.org</a></p>
+                            <p><strong>Website:</strong> aimlse.org</p>
+                            <p style="margin-top: 20px;">For teacher registration inquiries, program information, partnership opportunities, or general questions, please don't hesitate to contact us. We typically respond within 1-2 business days.</p>
                         </div>
                     </div>
                 </div>
@@ -828,11 +962,87 @@
 
     <!-- REGISTER PAGE -->
     <div id="register" class="page">
+        <div class="container">
+            <section class="section visible form-section">
+                <h2>Teacher <span class="accent-text">Registration</span></h2>
+                <p>Bring cutting-edge technology education to your classroom. If you're a student, please share this form with your teachers.</p>
+                <form id="joinForm">
+                    <div class="form-group">
+                        <label for="name">Teacher Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@school.edu">
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position/Title *</label>
+                        <input type="text" id="position" name="position" required placeholder="e.g., Math Teacher, Science Teacher, Technology Coordinator">
+                    </div>
+                    <div class="form-group">
+                        <label for="school">School Name *</label>
+                        <input type="text" id="school" name="school" required placeholder="Name of your school">
+                    </div>
+                    <div class="form-group">
+                        <label for="heard">How did you hear about us? *</label>
+                        <select id="heard" name="heard" required>
+                            <option value="">Select an option</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="email">Email</option>
+                            <option value="colleague">Colleague/Friend</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Questions or Comments (Optional)</label>
+                        <textarea id="message" name="message" placeholder="Any questions or additional information you'd like to share..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Submit Registration</button>
+                </form>
+            </section>
+
+            <div class="cta-section">
+                <h2>Questions About the Program?</h2>
+                <p>Visit our Program Information page or contact us directly at admin@aimlse.org</p>
+                <a href="#" onclick="showPage('info'); return false;" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </div>
 
     <div class="footer">
-        <p><strong>AIMLSE</strong> - Artificial Intelligence, Machine Learning, and Quantum Science Education</p>
-        <p>A nonprofit organization dedicated to bringing cutting-edge technology education to middle school students</p>
-        <p style="margin-top: 20px; opacity: 0.7;">© 2025 AIMLSE. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AIMLSE</h3>
+                <p>Artificial Intelligence & Machine Learning for Student Empowerment</p>
+                <p>A nonprofit organization dedicated to bringing cutting-edge technology education to middle school students.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#" onclick="showPage('home'); return false;">Home</a>
+                <a href="#" onclick="showPage('info'); return false;">Program Information</a>
+                <a href="#" onclick="showPage('about'); return false;">About Us</a>
+                <a href="#" onclick="showPage('register'); return false;">Register</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="https://raw.githubusercontent.com/aimlse/aimlse.github.io/main/774894b4-8cf6-4485-ac76-a3620e1635d6%20(1).pdf" download>Student Poster (PDF)</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSecbh_-L7wU1hooCT1fHWwSnfs3us36mIb7f64q06aJ1Z81LQ/viewform?usp=header" target="_blank">Student Interest Survey</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:admin@aimlse.org">admin@aimlse.org</a></p>
+                <p>Website: aimlse.org</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 AIMLSE. All rights reserved.</p>
+        </div>
     </div>
 
     <script>
@@ -901,18 +1111,6 @@
             // Show confirmation
             alert('Thank you for registering with AIMLSE! Your email client will open to send your registration. We will review your information and contact you soon with next steps to bring our program to your classroom.');
             e.target.reset();
-        });
-
-        // Smooth scroll for CTA button
-        document.querySelector('.cta-button').addEventListener('click', (e) => {
-            e.preventDefault();
-            showPage('register');
-            setTimeout(() => {
-                document.querySelector('.form-section').scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-            }, 100);
         });
     </script>
 </body>
