@@ -593,6 +593,7 @@
             <a class="nav-link" onclick="showPage('about')">About Us</a>
             <a class="nav-link" onclick="showPage('register')">Register</a>
             <a class="nav-link" onclick="showPage('volunteer')">Volunteer</a>
+            <a class="nav-link" onclick="showPage('signup')">Sign Up</a>
         </div>
     </nav>
 
@@ -980,12 +981,32 @@
         </div>
     </div>
 
+    <!-- SIGN UP PAGE -->
+    <div id="signup" class="page">
+        <div class="container">
+            <section class="section visible form-section">
+                <h2>Stay <span class="accent-text">Connected</span></h2>
+                <p>Sign up for updates, news, and opportunities from AIMLSE</p>
+                
+                <div style="display: flex; justify-content: center; margin-top: 40px;">
+                    <iframe src="https://gem.godaddy.com/signups/db34e1d9538e477c9116d10a6abc17a1/iframe" scrolling="no" frameborder="0" height="420" style="max-width: 400px; width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"></iframe>
+                </div>
+            </section>
+
+            <div class="cta-section">
+                <h2>Ready to Get Involved?</h2>
+                <p>Explore our programs and join the AIMLSE community</p>
+                <a href="#" onclick="showPage('info'); return false;" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+
     <!-- VOLUNTEER PAGE -->
     <div id="volunteer" class="page">
         <div class="container">
             <section class="section visible form-section">
                 <h2>Volunteer <span class="accent-text">Application</span></h2>
-                <p>If you are over 14 and in 9th grade or above, Join our team and help empower middle school students in AI, ML, and Quantum Computing</p>
+                <p>Join our team and help empower middle school students in AI, ML, and Quantum Computing</p>
                 
                 <form id="volunteerForm" style="max-width: 800px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px;">
                     <!-- Section 1: Personal Information -->
@@ -1148,6 +1169,7 @@
                 <a href="#" onclick="showPage('about'); return false;">About Us</a>
                 <a href="#" onclick="showPage('register'); return false;">Register</a>
                 <a href="#" onclick="showPage('volunteer'); return false;">Volunteer</a>
+                <a href="#" onclick="showPage('signup'); return false;">Sign Up</a>
             </div>
             
             <div class="footer-section">
