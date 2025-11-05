@@ -592,6 +592,7 @@
             <a class="nav-link" onclick="showPage('info')">Program Information</a>
             <a class="nav-link" onclick="showPage('about')">About Us</a>
             <a class="nav-link" onclick="showPage('register')">Register</a>
+            <a class="nav-link" onclick="showPage('volunteer')">Volunteer</a>
         </div>
     </nav>
 
@@ -979,6 +980,159 @@
         </div>
     </div>
 
+    <!-- VOLUNTEER PAGE -->
+    <div id="volunteer" class="page">
+        <div class="container">
+            <section class="section visible form-section">
+                <h2>Volunteer <span class="accent-text">Application</span></h2>
+                <p>Join our team and help empower middle school students in AI, ML, and Quantum Computing</p>
+                
+                <form id="volunteerForm" style="max-width: 800px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px;">
+                    <!-- Section 1: Personal Information -->
+                    <h3 style="color: #2c3e50; margin-bottom: 20px; border-bottom: 2px solid #3498db; padding-bottom: 10px;">Section 1: Personal Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">City & State *</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Grade/Occupation *</label>
+                        <input type="text" id="occupation" name="occupation" placeholder="e.g., 9th Grade, College Student, Software Engineer" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pronouns">Preferred Pronouns (optional)</label>
+                        <input type="text" id="pronouns" name="pronouns">
+                    </div>
+
+                    <!-- Section 2: Volunteer Interest -->
+                    <h3 style="color: #2c3e50; margin: 40px 0 20px; border-bottom: 2px solid #3498db; padding-bottom: 10px;">Section 2: Volunteer Interest</h3>
+                    
+                    <div class="form-group">
+                        <label for="whyVolunteer">Why do you want to volunteer with AIMLSE? *</label>
+                        <textarea id="whyVolunteer" name="whyVolunteer" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Which areas are you most interested in? (Select all that apply) *</label>
+                        <div style="margin-top: 10px;">
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="checkbox" name="interests" value="Teaching/Mentorship" style="width: auto; margin-right: 8px;"> Teaching/Mentorship</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="checkbox" name="interests" value="Video Production or Editing" style="width: auto; margin-right: 8px;"> Video Production or Editing</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="checkbox" name="interests" value="Social Media & Marketing" style="width: auto; margin-right: 8px;"> Social Media & Marketing</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="checkbox" name="interests" value="Event Coordination" style="width: auto; margin-right: 8px;"> Event Coordination</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="checkbox" name="interests" value="Website/Software Development" style="width: auto; margin-right: 8px;"> Website/Software Development</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="checkbox" name="interests" value="Community Management (Discord Moderation)" style="width: auto; margin-right: 8px;"> Community Management (Discord Moderation)</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="checkbox" name="interests" value="Administrative/Organizational Tasks" style="width: auto; margin-right: 8px;"> Administrative/Organizational Tasks</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;">
+                                <input type="checkbox" id="interestOther" name="interests" value="Other" style="width: auto; margin-right: 8px;"> Other: 
+                                <input type="text" id="interestOtherText" name="interestOtherText" style="display: inline-block; width: 200px; margin-left: 5px;">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Have you previously volunteered with STEM or education-based organizations? *</label>
+                        <div style="margin-top: 10px;">
+                            <label style="display: inline-block; margin-right: 20px; font-weight: normal;"><input type="radio" name="previousVolunteer" value="Yes" style="width: auto; margin-right: 8px;" required> Yes</label>
+                            <label style="display: inline-block; font-weight: normal;"><input type="radio" name="previousVolunteer" value="No" style="width: auto; margin-right: 8px;"> No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previousExperience">If yes, please describe briefly:</label>
+                        <textarea id="previousExperience" name="previousExperience"></textarea>
+                    </div>
+
+                    <!-- Section 3: Skills & Availability -->
+                    <h3 style="color: #2c3e50; margin: 40px 0 20px; border-bottom: 2px solid #3498db; padding-bottom: 10px;">Section 3: Skills & Availability</h3>
+                    
+                    <div class="form-group">
+                        <label for="skills">List any technical or leadership skills you have *</label>
+                        <textarea id="skills" name="skills" placeholder="e.g., Python, editing, leadership, communication" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>How many hours per week can you commit? *</label>
+                        <select name="hoursCommitment" required>
+                            <option value="">Select hours per week</option>
+                            <option value="1-2 hours">1–2 hours</option>
+                            <option value="3-5 hours">3–5 hours</option>
+                            <option value="6-10 hours">6–10 hours</option>
+                            <option value="More than 10 hours">More than 10 hours</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred volunteering format: *</label>
+                        <div style="margin-top: 10px;">
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="radio" name="format" value="Remote (online)" style="width: auto; margin-right: 8px;" required> Remote (online)</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="radio" name="format" value="In-person (if applicable)" style="width: auto; margin-right: 8px;"> In-person (if applicable)</label>
+                            <label style="display: block; margin: 8px 0; font-weight: normal;"><input type="radio" name="format" value="Both" style="width: auto; margin-right: 8px;"> Both</label>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: References & Agreement -->
+                    <h3 style="color: #2c3e50; margin: 40px 0 20px; border-bottom: 2px solid #3498db; padding-bottom: 10px;">Section 4: References & Agreement</h3>
+                    
+                    <div class="form-group">
+                        <label for="refName">Reference Name (Teacher, Mentor, or Supervisor) *</label>
+                        <input type="text" id="refName" name="refName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="refEmail">Reference Email *</label>
+                        <input type="email" id="refEmail" name="refEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="font-weight: 600; color: #2c3e50; margin-bottom: 15px; display: block;">AIMLSE Volunteer Agreement</label>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 6px; margin-bottom: 15px;">
+                            <p style="margin-bottom: 10px;">By submitting this form, I agree to:</p>
+                            <ul style="margin-left: 20px; color: #5a6c7d;">
+                                <li>Follow AIMLSE's community and conduct guidelines</li>
+                                <li>Respect all members and maintain a positive learning environment</li>
+                                <li>Fulfill my volunteer duties to the best of my ability</li>
+                                <li>Communicate promptly with AIMLSE coordinators</li>
+                            </ul>
+                        </div>
+                        <label style="display: block; font-weight: normal;">
+                            <input type="checkbox" name="agreement" required style="width: auto; margin-right: 8px;">
+                            I agree to the above terms and wish to volunteer with AIMLSE *
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signature">Digital Signature (Type your full name) *</label>
+                        <input type="text" id="signature" name="signature" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <button type="submit" class="submit-button">Submit Application</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
     <div class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -993,6 +1147,7 @@
                 <a href="#" onclick="showPage('info'); return false;">Program Information</a>
                 <a href="#" onclick="showPage('about'); return false;">About Us</a>
                 <a href="#" onclick="showPage('register'); return false;">Register</a>
+                <a href="#" onclick="showPage('volunteer'); return false;">Volunteer</a>
             </div>
             
             <div class="footer-section">
@@ -1004,6 +1159,7 @@
             <div class="footer-section">
                 <h3>Contact</h3>
                 <p>Email: <a href="mailto:admin@aimlse.org">admin@aimlse.org</a></p>
+                <p>Volunteer Office: <a href="mailto:volunteer.office@aimlse.org">volunteer.office@aimlse.org</a></p>
                 <p>Website: aimlse.org</p>
             </div>
         </div>
@@ -1016,23 +1172,18 @@
     <script>
         // Page navigation
         function showPage(pageName) {
-            // Hide all pages
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
             
-            // Remove active class from all nav links
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
             });
             
-            // Show selected page
             document.getElementById(pageName).classList.add('active');
             
-            // Add active class to clicked nav link
             event.target.classList.add('active');
             
-            // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -1052,6 +1203,63 @@
 
         document.querySelectorAll('.section').forEach(section => {
             observer.observe(section);
+        });
+
+        // Handle volunteer form submission
+        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked'))
+                .map(cb => {
+                    if (cb.value === 'Other') {
+                        return 'Other: ' + document.getElementById('interestOtherText').value;
+                    }
+                    return cb.value;
+                })
+                .join(', ');
+            
+            let emailBody = 'AIMLSE Volunteer Application\n\n';
+            emailBody += '=== SECTION 1: PERSONAL INFORMATION ===\n';
+            emailBody += `Full Name: ${formData.get('fullName')}\n`;
+            emailBody += `Email: ${formData.get('email')}\n`;
+            emailBody += `Phone: ${formData.get('phone') || 'Not provided'}\n`;
+            emailBody += `City & State: ${formData.get('location')}\n`;
+            emailBody += `Grade/Occupation: ${formData.get('occupation')}\n`;
+            emailBody += `Pronouns: ${formData.get('pronouns') || 'Not provided'}\n\n`;
+            
+            emailBody += '=== SECTION 2: VOLUNTEER INTEREST ===\n';
+            emailBody += `Why volunteer: ${formData.get('whyVolunteer')}\n`;
+            emailBody += `Areas of interest: ${interests}\n`;
+            emailBody += `Previous STEM volunteer experience: ${formData.get('previousVolunteer')}\n`;
+            emailBody += `Previous experience details: ${formData.get('previousExperience') || 'Not provided'}\n\n`;
+            
+            emailBody += '=== SECTION 3: SKILLS & AVAILABILITY ===\n';
+            emailBody += `Skills: ${formData.get('skills')}\n`;
+            emailBody += `Hours per week: ${formData.get('hoursCommitment')}\n`;
+            emailBody += `Preferred format: ${formData.get('format')}\n\n`;
+            
+            emailBody += '=== SECTION 4: REFERENCES & AGREEMENT ===\n';
+            emailBody += `Reference Name: ${formData.get('refName')}\n`;
+            emailBody += `Reference Email: ${formData.get('refEmail')}\n`;
+            emailBody += `Digital Signature: ${formData.get('signature')}\n`;
+            emailBody += `Date: ${formData.get('date')}\n`;
+            emailBody += `Agreement: Accepted\n`;
+            
+            const mailtoLink = `mailto:volunteer.office@aimlse.org?subject=Volunteer Application - ${formData.get('fullName')}&body=${encodeURIComponent(emailBody)}`;
+            
+            window.location.href = mailtoLink;
+            
+            alert('Thank you for your application! Your email client will open with your application. Please review and send the email to complete your submission.');
+        });
+
+        // Handle "Other" checkbox for interests
+        document.getElementById('interestOther').addEventListener('change', function() {
+            document.getElementById('interestOtherText').disabled = !this.checked;
+            if (!this.checked) {
+                document.getElementById('interestOtherText').value = '';
+            }
         });
     </script>
 </body>
